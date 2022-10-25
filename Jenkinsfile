@@ -13,6 +13,7 @@ pipeline {
               steps
               {
                   sh 'chmod +x Dockerinstall'
+                  sh './Dockerinstall'
                  
               }
           }
