@@ -17,5 +17,12 @@ pipeline {
                  
               }
           }
+        stage('docker build and deploy')
+        {
+            steps{
+                sh 'sudo docker build . -t hotel:project'
+                sh 'sudo run -d --name hotelproject -p 8085:80 hotel:project'
+            }
+        }    
     }
 }
