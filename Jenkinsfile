@@ -8,13 +8,12 @@ pipeline {
     }
     stages {
         
-        stage('apache2 install')
+        stage('Docker install')
           {
               steps
               {
-                  sh 'sudo apt install apache2 -y'
-                  sh 'sudo rm -rf /var/www/html/*'
-                  sh 'sudo cp -r  /home/ubuntu/workspace/masterproject/* /var/www/html/'
+                  sh 'chmod +x Dockerinstall'
+                 
               }
           }
     }
