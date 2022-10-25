@@ -1,6 +1,11 @@
 pipeline {
-    agent any
-
+    agent 
+    {
+        node
+        {
+            label 'deployment'
+        }
+    }
     stages {
         
         stage('apache2 install')
